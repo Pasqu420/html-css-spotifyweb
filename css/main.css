@@ -1,0 +1,260 @@
+/* regole generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.felx-row{
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+}
+
+body{
+  font-size: 12px;
+}
+
+li{
+  list-style: none;
+}
+
+/* regole nav */
+nav{
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 100%;
+  background-color: #000000;
+}
+
+/* nav logo */
+nav .logo-md{
+  width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 10px 0 0 10px;
+}
+.logo-xs{
+  width: 2rem;
+  height: auto;
+  display: none;
+}
+
+@media screen and (max-width: 570px) {
+  nav{
+    flex-basis: 60px;
+    align-items: center;
+  }
+  nav .logo-md{
+    display: none;
+  }
+  .logo-xs{
+    display: block;
+    color: #ffff;
+    margin-top: 20px;
+  }
+}
+
+/* nav sezioni */
+nav .sezioni > ul{
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.sezioni ul > li{
+  display: flex;
+  height: 45px;
+  align-items: center;
+  padding-left: 10px;
+}
+
+#home a{
+  color: #ffff;
+}
+#home{
+  border-left: 3px solid limegreen;
+}
+
+.sezioni li > a > img{
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.sezioni li > a{
+  text-decoration: none;
+  color: grey;
+}
+
+@media screen and (max-width: 570px){
+  .sezioni{
+    flex-grow: 1;
+    padding-top: 20px;
+  }
+  .sezioni ul > li{
+    height: 40px;
+    padding-left: 0;
+  }
+  .sezioni li > a:last-child{
+    display: none;
+  }
+  .sezioni li > a > img{
+    margin-right: 0;
+  }
+  #home{
+    border-left:none;
+  }
+}
+
+/* nav playlist */
+nav .container-playlist{
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-y: scroll;
+  padding: 10px 0 0 10px;
+}
+
+nav .container-playlist ul > li:first-child{
+  color: #ffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+nav .container-playlist ul{
+  font-size: 1rem;
+}
+
+.playlist{
+  margin: 10px 0;
+}
+.playlist a{
+  color: grey;
+  text-decoration: none;
+}
+.create.playlist i{
+  font-size: 2.5rem;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.create.playlist a{
+  font-weight: bold;
+}
+
+@media screen and (max-width: 570px){
+  nav .container-playlist{
+    display: none;
+  }
+}
+
+/* regole account */
+.account{
+  padding: 10px 10px 0 10px;
+}
+.account li{
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.account li:first-child{
+  border-bottom: 1px solid #ffff;
+  padding-bottom: 10px;
+}
+
+.account li:last-child{
+  padding-top: 10px;
+}
+
+.account li:first-child{
+  color:grey;
+}
+
+.account li > a:last-child{
+  font-size: 1rem;
+  color: #ffff;
+  text-decoration: none;
+}
+
+.account img{
+  width: 0.9rem;
+  margin-right:10px;
+}
+
+.account .profile{
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+@media screen and (max-width: 570px){
+  .account img{
+    margin: 0;
+  }
+  .account li > a:last-child{
+    display: none;
+  }
+  .account li:first-child{
+    border: none;
+  }
+}
+/* regole main */
+main{
+  width: calc(100% - 280px);
+  overflow-y: scroll;
+  background-color: rgb(20, 25, 34);
+}
+@media screen and (max-width: 570px) {
+  main{
+    width: calc(100% - 60px);
+  }
+}
+
+/* regole upgrade */
+main .upgrade{
+  opacity: 0.3;
+  width: 100%;
+  height: 90px;
+  background-color: rgba(8,11,18, 0.6);
+  color:#ffff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main .upgrade button{
+width: 180px;
+height: 40px;
+border-radius: 20px;
+transition: 1s;
+color: blue;
+font-size: 1rem;
+}
+main .upgrade div{
+  background-color: rgb(8,11,18);
+  margin-right: 20px;
+}
+main .upgrade button:hover{
+  transform: scale(1.2);
+}
+
+main .contenuti{
+  width: 100%;
+  height: auto;
+  padding-top: 95px;
+}
+
+
+/* regole player */
+#player{
+  width: 100%;
+  flex-basis: 10vh;
+  flex-shrink: 0;
+  background-color: #0000ff;
+}
