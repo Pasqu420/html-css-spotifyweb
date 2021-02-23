@@ -12,7 +12,7 @@
 }
 .felx-row{
   display: flex;
-  height: 90vh;
+  height: calc(100vh - 90px);
 }
 
 body{
@@ -27,17 +27,17 @@ li{
 nav{
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   width: 250px;
-  min-height: 400px;
+  height: calc(100vh - 90px);
   background-color: #000000;
 }
-
-@media screen and (min-height: 300px){
+@media screen and (max-height: 600px){
   nav{
-    overflow-y: auto;
+    overflow-y: scroll;
+
   }
 }
-
 /* hover nav */
 #nav-hover:hover,
 #hover-main:hover{
@@ -128,30 +128,23 @@ nav .sezioni > ul{
 
 /* nav playlist */
 nav .container-playlist{
-  flex-grow: 1;
-  flex-shrink: 1;
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
   padding: 10px 0 0 10px;
+  flex-shrink: 1;
 }
 
-nav .container-playlist ul > li:first-child{
+nav h3{
   color: #ffff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-nav .container-playlist ul{
+.create.playlist a{
   font-size: 1rem;
 }
 
-.playlist{
-  margin: 10px 0;
-}
-.playlist a{
-  color: grey;
-  text-decoration: none;
-}
 .create.playlist i{
   font-size: 2.5rem;
   margin-right: 5px;
@@ -161,8 +154,24 @@ nav .container-playlist ul{
   font-weight: bold;
 }
 
+nav .scroll{
+  overflow-y: auto;
+  flex-grow: 1;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+.playlist{
+  margin: 10px 0;
+}
+.playlist a{
+  color: grey;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 700px){
-  nav .container-playlist{
+  nav .container-playlist,
+  nav .scroll{
     display: none;
   }
 }
@@ -284,6 +293,6 @@ color: limegreen;
 /* regole player */
 #player{
   width: 100%;
-  height: 95px;
+  height: 90px;
   background-color: #0000ff;
 }
