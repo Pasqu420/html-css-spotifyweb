@@ -12,7 +12,7 @@
 }
 .felx-row{
   display: flex;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 75px);
 }
 
 body{
@@ -29,13 +29,12 @@ nav{
   flex-direction: column;
   flex-shrink: 0;
   width: 250px;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 75px);
   background-color: #000000;
 }
 @media screen and (max-height: 600px){
   nav{
     overflow-y: scroll;
-
   }
 }
 /* hover nav */
@@ -96,13 +95,15 @@ nav .sezioni > ul{
 }
 
 .sezioni li > a > img{
-  width: 30px;
+  width: 35px;
   height: auto;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .sezioni li > a{
   text-decoration: none;
+  vertical-align: middle;
   color: grey;
 }
 
@@ -115,7 +116,7 @@ nav .sezioni > ul{
     height: 40px;
     padding-left: 0;
   }
-  .sezioni li > a:last-child{
+  .sezioni li > a > span{
     display: none;
   }
   .sezioni li > a > img{
@@ -205,7 +206,7 @@ nav .scroll{
   color:#ffff;
 }
 .account img{
-  width: 0.9rem;
+  width: 1.1rem;
   margin-right:10px;
 }
 
@@ -225,11 +226,18 @@ nav .scroll{
   .account li:first-child{
     border: none;
   }
+  .account .profile{
+    margin-bottom: 15px;
+  }
 }
 
 /* regole main */
 main{
+  width: calc(100% - 250px);
+  height: 100%;
   flex-grow: 1;
+  overflow-y: scroll;
+
   background-color: rgb(20, 25, 34);
 }
 @media screen and (max-width: 700px) {
@@ -239,18 +247,24 @@ main{
 }
 
 /* regole upgrade */
+main section:first-child{
+  position: fixed;
+  top: 0;
+  width: calc(100% - 250px);
+}
 main .upgrade{
-  width: 100%;
+  width:100%;
   height: 90px;
   background-color: rgba(8,11,18, 0.6);
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-shrink: 0;
 }
 
 main .upgrade button{
 width: 180px;
-height: 40px;
+height: 30px;
 background-color: rgba(8,11,18, 0.6);
 border-radius: 20px;
 margin-right: 20px;
@@ -261,15 +275,28 @@ font-size: 1rem;
 
 main .upgrade button:hover{
   transform: scale(1.2);
+  cursor: pointer;
 }
 
+@media screen and (max-width: 700px){
+  main section:first-child{
+    width: calc(100% - 60px);
+  }
+}
+
+@media screen and (max-width: 400px){
+  main .upgrade button{
+    width: 120px;
+    height: 20px;
+    font-size: 0.6rem;
+  }
+}
 /* regole section contenuti */
 
 main .contenuti{
   width: 100%;
   height: auto;
-  overflow-y: scroll;
-  padding-top: 10px;
+  padding-top: 100px;
 }
 main .contenuti ul{
   display: flex;
@@ -277,7 +304,7 @@ main .contenuti ul{
   flex-wrap: wrap;
 }
 .contenuti ul li{
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-right: 20px;
 }
 .contenuti ul li > a{
@@ -290,9 +317,39 @@ margin:  5px auto;
 color: limegreen;
 }
 
+@media screen and (max-width: 700px){
+  .contenuti ul li{
+    margin-bottom: 5px;
+  }
+}
+
+/* regole contenuti multimediali */
+.recently-played{
+  margin-top: 25px;
+  margin-left: 40px;
+}
+
+.recently-played h2{
+  font-size: 2rem;
+  color: #ffff;
+  padding-left: 10px;
+}
+
+.container-card{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-card .card img{
+  width: 200px;
+  height: auto;
+  padding: 10px;
+}
+
+
 /* regole player */
 #player{
   width: 100%;
-  height: 90px;
+  height: 75px;
   background-color: #0000ff;
 }
