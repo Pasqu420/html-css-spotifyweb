@@ -81,7 +81,7 @@ nav .logo-md{
 
 @media screen and (max-width: 700px) {
   nav{
-    flex-basis: 60px;
+    width: 60px;
     align-items: center;
   }
 
@@ -201,7 +201,7 @@ nav .scroll{
 
 /* regole account */
 .account{
-  padding: 10px 10px 0 10px;
+  padding: 10px;
 }
 
 .account li{
@@ -230,6 +230,7 @@ nav .scroll{
 .account img{
   width: 1.1rem;
   margin-right:10px;
+  vertical-align: middle;
 }
 
 .account .profile{
@@ -238,11 +239,16 @@ nav .scroll{
   background-color: grey;
 }
 
+.account span{
+  vertical-align: middle;
+
+}
+
 @media screen and (max-width: 700px){
   .account img{
     margin: 0;
   }
-  .account li > a:last-child{
+  .account li > a > span{
     display: none;
   }
   .account li:first-child{
@@ -255,7 +261,6 @@ nav .scroll{
 
 /* regole main */
 main{
-  width: calc(100% - 250px);
   height: 100%;
   flex-grow: 1;
   overflow-y: scroll;
