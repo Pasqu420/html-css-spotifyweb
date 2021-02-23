@@ -12,7 +12,6 @@
 }
 .felx-row{
   display: flex;
-  flex-direction: row;
   height: 90vh;
 }
 
@@ -28,9 +27,21 @@ li{
 nav{
   display: flex;
   flex-direction: column;
-  width: 280px;
-  height: 100%;
+  width: 250px;
+  min-height: 400px;
   background-color: #000000;
+}
+
+@media screen and (min-height: 300px){
+  nav{
+    overflow-y: auto;
+  }
+}
+
+/* hover nav */
+#nav-hover:hover,
+#hover-main:hover{
+  color: #ffff;
 }
 
 /* nav logo */
@@ -40,20 +51,23 @@ nav .logo-md{
   margin-bottom: 20px;
   padding: 10px 0 0 10px;
 }
+
 .logo-xs{
   width: 2rem;
   height: auto;
   display: none;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 700px) {
   nav{
     flex-basis: 60px;
     align-items: center;
   }
+
   nav .logo-md{
     display: none;
   }
+
   .logo-xs{
     display: block;
     color: #ffff;
@@ -92,7 +106,7 @@ nav .sezioni > ul{
   color: grey;
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 700px){
   .sezioni{
     flex-grow: 1;
     padding-top: 20px;
@@ -147,7 +161,7 @@ nav .container-playlist ul{
   font-weight: bold;
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 700px){
   nav .container-playlist{
     display: none;
   }
@@ -157,6 +171,7 @@ nav .container-playlist ul{
 .account{
   padding: 10px 10px 0 10px;
 }
+
 .account li{
   display: flex;
   align-items: center;
@@ -172,16 +187,14 @@ nav .container-playlist ul{
   padding-top: 10px;
 }
 
-.account li:first-child{
-  color:grey;
-}
-
-.account li > a:last-child{
+.account ul li > a{
   font-size: 1rem;
-  color: #ffff;
+  color: grey;
   text-decoration: none;
 }
-
+.account ul li:last-child > a{
+  color:#ffff;
+}
 .account img{
   width: 0.9rem;
   margin-right:10px;
@@ -193,7 +206,7 @@ nav .container-playlist ul{
   background-color: grey;
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 700px){
   .account img{
     margin: 0;
   }
@@ -204,13 +217,13 @@ nav .container-playlist ul{
     border: none;
   }
 }
+
 /* regole main */
 main{
-  width: calc(100% - 280px);
-  overflow-y: scroll;
+  flex-grow: 1;
   background-color: rgb(20, 25, 34);
 }
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 700px) {
   main{
     width: calc(100% - 60px);
   }
@@ -218,11 +231,9 @@ main{
 
 /* regole upgrade */
 main .upgrade{
-  opacity: 0.3;
   width: 100%;
   height: 90px;
   background-color: rgba(8,11,18, 0.6);
-  color:#ffff;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -231,30 +242,48 @@ main .upgrade{
 main .upgrade button{
 width: 180px;
 height: 40px;
+background-color: rgba(8,11,18, 0.6);
 border-radius: 20px;
+margin-right: 20px;
 transition: 1s;
-color: blue;
+color:#ffff;
 font-size: 1rem;
 }
-main .upgrade div{
-  background-color: rgb(8,11,18);
-  margin-right: 20px;
-}
+
 main .upgrade button:hover{
   transform: scale(1.2);
 }
 
+/* regole section contenuti */
+
 main .contenuti{
   width: 100%;
   height: auto;
-  padding-top: 95px;
+  overflow-y: scroll;
+  padding-top: 10px;
 }
-
+main .contenuti ul{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+.contenuti ul li{
+  font-size: 1rem;
+  margin-right: 20px;
+}
+.contenuti ul li > a{
+  color:grey;
+  text-decoration: none;
+}
+.contenuti ul li > hr{
+width: 40px;
+margin:  5px auto;
+color: limegreen;
+}
 
 /* regole player */
 #player{
   width: 100%;
-  flex-basis: 10vh;
-  flex-shrink: 0;
+  height: 95px;
   background-color: #0000ff;
 }
