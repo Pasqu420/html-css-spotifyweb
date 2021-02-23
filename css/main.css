@@ -23,6 +23,26 @@ li{
   list-style: none;
 }
 
+.m-left{
+  margin-left: 65px;
+}
+
+h2{
+  font-size: 2rem;
+  color: #ffff;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+.subtitle{
+  font-size: 0.8rem;
+  color: #808080;
+}
+.description{
+  padding-left: 10px;
+  font-size: 0.85rem;
+  color: #808080;
+}
+
 /* regole nav */
 nav{
   display: flex;
@@ -250,6 +270,7 @@ main{
 main section:first-child{
   position: fixed;
   top: 0;
+  z-index: 199;
   width: calc(100% - 250px);
 }
 main .upgrade{
@@ -324,29 +345,72 @@ color: limegreen;
 }
 
 /* regole contenuti multimediali */
-.recently-played{
-  margin-top: 25px;
-  margin-left: 40px;
-}
-
-.recently-played h2{
-  font-size: 2rem;
-  color: #ffff;
-  padding-left: 10px;
-}
-
 .container-card{
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
-
 .container-card .card img{
-  width: 200px;
+  width: 100%;
   height: auto;
-  padding: 10px;
 }
 
+.album{
+  padding: 10px;
+  width: 210px;
+}
+.album div:first-child{
+  width: 100%;
+  position: relative;
+}
 
+.overlay{
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.card div:first-child:hover .overlay{
+  display: block;
+}
+.album .play{
+  font-size: 4rem;
+  color:#ffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main h3, .subtitle{
+  display: block;
+  text-align: center;
+}
+
+main h3{
+  font-size: 1rem;
+  color:#ffff;
+  padding: 5px 0;
+}
+
+/* recently */
+.recently-played{
+  margin-top: 25px;
+}
+
+/* john-doe */
+
+
+/* artisti popolari */
+.artisti-popolari img{
+  border-radius: 50%;
+}
+.artisti-popolari .overlay{
+  border-radius: 50%;
+}
 /* regole player */
 #player{
   width: 100%;
