@@ -51,7 +51,7 @@
           <div class="account">
             <ul>
               <li> <a id="nav-hover" href="#"> <img src="css/img/download.svg" alt=""> <span>installa app</span> </a> </li>
-              <li> <a href="#"> <img class="profile" src="css/img/profile.svg" alt=""> <span>John Doe</span> </a> </li>
+              <li> <img class="profile" src="css/img/profile.svg" alt=""> <span>John Doe</span> </li>
             </ul>
           </div>
 
@@ -231,7 +231,7 @@
 
           <div class="title-song">
             <h4>Sinister</h4>
-            <span>Brano Nome</span>
+            <span> <a href="#"> Brano Nome </a> </span>
           </div>
 
           <div class="icon">
@@ -256,6 +256,8 @@
           <div class="time">
             <span> 0:25 </span>
             <div class="line-time">
+              <div class="time-passed">
+              </div>
               <div class="pointer">
               </div>
             </div>
@@ -265,13 +267,20 @@
         </div>
 
         <div class="player-right">
+
           <ul>
             <li> <i class="fas fa-bars"></i> </li>
             <li> <i class="fas fa-tv"></i> </li>
             <li> <i class="fas fa-volume-up"></i> </li>
           </ul>
+
           <div class="range">
-            <input type="range" min="1" max="100" value="25">
+            <div class="line-range">
+              <div class="current-range">
+              </div>
+              <div class="pointer">
+              </div>
+            </div>
           </div>
         </div>
 
