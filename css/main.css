@@ -24,7 +24,12 @@ li{
 }
 
 .m-left{
-  margin-left: 65px;
+  margin-left: 40px;
+}
+@media screen and (max-width: 450px) {
+  .m-left{
+    margin-left: 15px;
+  }
 }
 
 h2{
@@ -113,7 +118,7 @@ nav .sezioni > ul{
   color: #ffff;
 }
 #home{
-  border-left: 3px solid limegreen;
+  border-left: 3px solid #adff2f;
 }
 
 .sezioni li > a > img{
@@ -320,7 +325,7 @@ main .upgrade button:hover{
     font-size: 0.6rem;
   }
 }
-@media screen and (max-height: 200px){
+@media screen and (max-height: 400px){
   main .upgrade{
     display: none;
   }
@@ -348,12 +353,16 @@ main .contenuti ul{
 .contenuti ul li > hr{
 width: 40px;
 margin:  5px auto;
-color: limegreen;
+color: #adff2f;
 }
 
 @media screen and (max-width: 700px){
   .contenuti ul li{
     margin-bottom: 5px;
+  }
+  main .contenuti{
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -365,7 +374,7 @@ color: limegreen;
 }
 .container-card > .container-wrap{
   display: flex;
-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .container-card .card img{
   width: 100%;
@@ -419,9 +428,6 @@ main h3{
   margin-top: 25px;
 }
 
-/* john-doe */
-
-
 /* artisti popolari */
 .artisti-popolari img{
   border-radius: 50%;
@@ -433,6 +439,100 @@ main h3{
 #player{
   width: 100%;
   height: 75px;
-  background-color: #0000ff;
+  display: flex;
+  align-items: center;
   z-index: 9999;
+  background-color: #282828;
+}
+#player [class*="fa-"]{
+  color: #ffff;
+}
+/* left */
+.player-left{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.player-left img{
+  width: 35px;
+  height: auto;
+  margin-right: 7px;
+}
+.title-song{
+  margin-right: 20px;
+}
+
+.title-song h4{
+  font-size: 0.8rem;
+  color:#ffff;
+}
+.title-song span{
+  font-size: 0.65rem;
+  color: #808080;
+}
+/* center */
+.player-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.player-center .commands > ul{
+  width: 160px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 13px;
+}
+.commands ul > li{
+  font-size: 0.8rem;
+}
+.commands .fa-play-circle{
+  font-size: 1.4rem;
+}
+
+.time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.line-time{
+  width: 37%;
+  height: 0.2rem;
+  background-color: #ffff;
+  position: relative;
+  margin: 0 10px;
+}
+.line-time > .pointer{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #808080;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+/* right */
+.player-right{
+  display: flex;
+  align-items: center;
+}
+.player-right > ul{
+  display: flex;
+}
+.player-right > ul > li{
+padding-right: 7px;
+}
+.player-right > ul > li:last-child{
+}
+.range{
+  width: 100px;
+}
+.range input{
+  display: block;
+  max-width: 80%;
+  margin:auto;
 }
