@@ -65,8 +65,9 @@ nav{
   }
 }
 /* hover nav */
-#nav-hover:hover,
-#hover-main:hover{
+.nav-hover:hover,
+.nav-hover:hover a,
+.hover-main:hover a{
   color: #ffff;
 }
 
