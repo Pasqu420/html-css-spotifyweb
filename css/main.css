@@ -26,7 +26,7 @@ li{
 .m-left{
   margin-left: 40px;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   .m-left{
     margin-left: 15px;
   }
@@ -42,6 +42,7 @@ h2{
   font-size: 0.8rem;
   color: #808080;
 }
+
 .description{
   display: block;
   padding-left: 10px;
@@ -50,12 +51,25 @@ h2{
   color: #808080;
 }
 
+/* media font main */
+@media screen and (max-width: 742px) {
+  h2{
+    font-size: 1.5rem;
+  }
+  .subtitle{
+    font-size: 0.7rem;
+  }
+  .card.album h3{
+    font-size: 0.8rem;
+  }
+}
+
 /* regole nav */
 nav{
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  width: 250px;
+  width: 210px;
   height: calc(100vh - 75px);
   background-color: #000000;
 }
@@ -78,23 +92,20 @@ nav .logo-md{
   margin-bottom: 20px;
   padding: 10px 0 0 10px;
 }
-
 .logo-xs{
-  width: 2rem;
+  width: 1.8rem;
   height: auto;
   display: none;
 }
-
-@media screen and (max-width: 700px) {
+/* media loghi nav */
+@media screen and (max-width: 550px) {
   nav{
-    width: 60px;
+    width: 40px;
     align-items: center;
   }
-
   nav .logo-md{
     display: none;
   }
-
   .logo-xs{
     display: block;
     color: #ffff;
@@ -123,7 +134,7 @@ nav .sezioni > ul{
 }
 
 .sezioni li > a > img{
-  width: 35px;
+  width: 25px;
   height: auto;
   margin-right: 10px;
   vertical-align: middle;
@@ -135,7 +146,7 @@ nav .sezioni > ul{
   color: grey;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 550px){
   .sezioni{
     flex-grow: 1;
     padding-top: 20px;
@@ -184,7 +195,7 @@ nav h3{
 }
 
 nav .scroll{
-  min-height: 30px;
+  min-height: 40px;
   overflow-y: auto;
   flex-grow: 1;
   font-size: 1rem;
@@ -198,8 +209,8 @@ nav .scroll{
   color: grey;
   text-decoration: none;
 }
-
-@media screen and (max-width: 700px){
+/* media scroll playlist */
+@media screen and (max-width: 550px){
   nav .container-playlist,
   nav .scroll{
     display: none;
@@ -216,16 +227,13 @@ nav .scroll{
   align-items: center;
   height: 40px;
 }
-
 .account li:first-child{
   border-bottom: 1px solid #ffff;
   padding-bottom: 10px;
 }
-
 .account li:last-child{
   padding-top: 10px;
 }
-
 .account ul li > a{
   font-size: 1rem;
   color: grey;
@@ -235,23 +243,22 @@ nav .scroll{
   font-size: 1rem;
   color:#ffff;
 }
+
 .account img{
-  width: 1.1rem;
+  width: 1rem;
   margin-right:10px;
   vertical-align: middle;
 }
-
 .account .profile{
-  width: 1.5rem;
+  width: 1.4rem;
   border-radius: 50%;
   background-color: grey;
 }
-
 .account span{
   vertical-align: middle;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 550px){
   .account img{
     margin: 0;
   }
@@ -274,13 +281,7 @@ main{
   height: 100%;
   flex-grow: 1;
   overflow-y: scroll;
-
   background-color: rgb(20, 25, 34);
-}
-@media screen and (max-width: 700px) {
-  main{
-    width: calc(100% - 60px);
-  }
 }
 
 /* regole upgrade */
@@ -288,10 +289,9 @@ main section:first-child{
   position: fixed;
   top: 0;
   z-index: 199;
-  width: calc(100% - 250px);
+  width: calc(100% - 210px);
 }
 main .upgrade{
-  width:100%;
   height: 90px;
   background-color: rgba(8,11,18, 0.6);
   display: flex;
@@ -315,13 +315,13 @@ main .upgrade button:hover{
   transform: scale(1.2);
   cursor: pointer;
 }
-
-@media screen and (max-width: 700px){
+/* upgrade media */
+@media screen and (max-width: 550px){
   main section:first-child{
-    width: calc(100% - 60px);
+    width: calc(100% - 40px);
   }
 }
-
+/* s */
 @media screen and (max-width: 400px){
   main .upgrade button{
     width: 120px;
@@ -329,13 +329,20 @@ main .upgrade button:hover{
     font-size: 0.6rem;
   }
 }
+/* xs bottone */
+@media screen and (max-width: 209px){
+  main .upgrade{
+    display: none;
+  }
+}
+/* height s */
 @media screen and (max-height: 400px){
   main .upgrade{
     display: none;
   }
 }
-/* regole section contenuti */
 
+/* regole section contenuti */
 main .contenuti{
   width: 100%;
   height: auto;
@@ -347,7 +354,7 @@ main .contenuti ul{
   flex-wrap: wrap;
 }
 .contenuti ul li{
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   margin-right: 20px;
 }
 .contenuti ul li > a{
@@ -355,12 +362,13 @@ main .contenuti ul{
   text-decoration: none;
 }
 .contenuti ul li > hr{
-width: 40px;
-margin:  5px auto;
-color: #adff2f;
+  width: 35px;
+  margin:  5px auto;
+  color: #adff2f;
 }
 
-@media screen and (max-width: 700px){
+/* media titoli main  */
+@media screen and (max-width: 550px){
   .contenuti ul li{
     margin-bottom: 5px;
   }
@@ -378,18 +386,39 @@ color: #adff2f;
 }
 .container-card > .container-wrap{
   display: flex;
-  flex-wrap: wrap;
+  width: calc(100% / 3 - 95px);
 }
+/* lg */
+@media screen and (max-width: 1300px) {
+  .container-card > .container-wrap{
+    width: calc(100% / 2);
+    margin-bottom: 10px;
+  }
+}
+/* md */
+@media screen and (max-width: 910px){
+  .container-card > .container-wrap{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* xs */
+@media screen and (max-width: 304px ) {
+  .container-card > .container-wrap{
+    flex-wrap: wrap;
+  }
+}
+
 .container-card .card img{
   width: 100%;
   height: auto;
 }
 
 .album{
-  padding: 10px;
-  width: 210px;
+  flex-basis: 210px;
   margin-right: 20px;
 }
+
 .album div:first-child{
   width: 100%;
   position: relative;
@@ -467,7 +496,7 @@ main h3{
   margin-right: 7px;
 }
 .title-song{
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .title-song h4{
@@ -527,6 +556,7 @@ main h3{
   width: 100%;
 }
 .time span{
+  font-size: 0.6rem;
   color:#ffff;
 }
 .line-time{
@@ -567,23 +597,24 @@ main h3{
 
 /* right */
 .player-right{
+  width: 120px;
   display: flex;
   align-items: center;
 }
 .player-right > ul{
   display: flex;
+  width: 50px;
+  margin-right: 7px;
 }
 .player-right > ul > li{
-padding-right: 8px;
-}
-.player-right > ul > li:last-child{
+  padding-right: 5px;
 }
 
 .range{
-  width: 95px;
+  width: calc(100% - 50px);
 }
 .line-range{
-  width: 90%;
+  width: 95%;
   height: 0.2rem;
   background-color: #ffff;
   position: relative;
@@ -598,3 +629,36 @@ padding-right: 8px;
   width: 0.7rem;
   height: 0.7rem;
 }
+
+/* media footer/player */
+ @media screen and (max-width: 435px) {
+   /* left */
+   .title-song{
+     margin-right: 10px;
+   }
+   .player-left img{
+     width: 30px;
+     height: auto;
+     margin-right: 5px;
+   }
+   .title-song h4{
+     font-size: 0.65rem;
+   }
+   .title-song span > a{
+     font-size: 0.55rem;
+   }
+   .icon span{
+     font-size: 0.75rem;
+   }
+  /* center */
+  .player-center .commands > ul{
+    width: 110px;
+    justify-content: space-evenly;
+  }
+  /* right */
+  .fa-bars,
+  .fa-tv,
+  .fa-volume-up{
+    font-size: 0.7rem;
+  }
+ }
