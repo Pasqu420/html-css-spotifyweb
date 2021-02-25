@@ -17,6 +17,7 @@
 
 body{
   font-size: 12px;
+  font-family: 'Roboto', sans-serif;
 }
 
 li{
@@ -115,7 +116,7 @@ nav .logo-md{
 
 /* nav sezioni */
 nav .sezioni > ul{
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   margin-bottom: 25px;
 }
 
@@ -635,7 +636,7 @@ main h3{
  @media screen and (max-width: 435px) {
    /* left */
    .title-song{
-     margin-right: 10px;
+     margin-right: 7px;
    }
    .player-left img{
      width: 30px;
@@ -647,6 +648,10 @@ main h3{
    }
    .title-song span > a{
      font-size: 0.55rem;
+   }
+   .icon{
+     width: 12px;
+     height: auto;
    }
    .icon span{
      font-size: 0.75rem;
