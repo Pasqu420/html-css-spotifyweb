@@ -186,7 +186,7 @@ nav h3{
 }
 
 .create.playlist i{
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-right: 5px;
   vertical-align: middle;
 }
@@ -198,7 +198,7 @@ nav .scroll{
   min-height: 40px;
   overflow-y: auto;
   flex-grow: 1;
-  font-size: 1rem;
+  font-size: 0.85rem;
   padding-left: 10px;
 }
 
@@ -235,7 +235,7 @@ nav .scroll{
   padding-top: 10px;
 }
 .account ul li > a{
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: grey;
   text-decoration: none;
 }
@@ -383,6 +383,7 @@ main .contenuti ul{
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  margin-top: 15px;
 }
 .container-card > .container-wrap{
   display: flex;
@@ -391,7 +392,7 @@ main .contenuti ul{
 /* lg */
 @media screen and (max-width: 1300px) {
   .container-card > .container-wrap{
-    width: calc(100% / 2);
+    width: calc(100% / 2 - 65px);
     margin-bottom: 10px;
   }
 }
